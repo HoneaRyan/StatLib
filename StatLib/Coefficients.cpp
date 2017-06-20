@@ -20,8 +20,8 @@ namespace StatLib {
 		std::vector<double> sortedYs = ys;
 		std::vector<double> rankX;
 		std::vector<double> rankY;
-		rankX.reserve(10);
-		rankY.reserve(10);
+		rankX.reserve(xs.size());
+		rankY.reserve(ys.size());
 		std::sort(sortedXs.begin(), sortedXs.end());
 		std::sort(sortedYs.begin(), sortedYs.end());
 

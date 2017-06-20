@@ -24,9 +24,17 @@ namespace StatLib
 	};
 
 	class Coefficients {
-		double PearsonCorrelation(double*, double*, int);
-		double PearsonCorrelation(std::vector<double> xs, std::vector<double> ys);
-		double SpearmansRankCorrelation(std::vector<double> xs, std::vector<double> ys);
-		double SpearmansUniqueRankCorrelation(std::vector<double> xs, std::vector<double> ys);
+	public:
+		static double PearsonCorrelation(double*, double*, int);
+		static double PearsonCorrelation(std::vector<double> xs, std::vector<double> ys);
+		static double SpearmansRankCorrelation(std::vector<double> xs, std::vector<double> ys);
+		static double SpearmansUniqueRankCorrelation(std::vector<double> xs, std::vector<double> ys);
+	};
+
+	class Regression {
+	public:
+		static std::vector<double> linearModelCoefficients(std::vector<double>, std::vector<double>);
+		std::vector<double> generalLinearModelCoefficients(std::vector<std::vector<double>> vals);
+		double predict(std::vector<double> coeffs, std::vector<double> vals);
 	};
 }
